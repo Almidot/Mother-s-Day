@@ -1,0 +1,109 @@
+h1{color: rgb(67, 67, 100);
+font-family: 'Times New Roman', Times, serif;
+font-size: x-large;}
+p{color: rgb(67, 67, 100);
+font-family: 'Courier New', Courier, monospace;
+font-size: medium;}
+p2{color: rgb(3, 3, 4);
+font-family: Georgia, 'Times New Roman', Times, serif ;
+font-size: larger;
+line-height: 1.4;
+padding: 20px;
+text-align: justify;}
+
+.rounded-image{
+    border-radius: 15px;
+}
+
+
+
+body {
+    background: #cbd4f1;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    margin: auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.heart {
+    width: 100px;
+    height: 90px;
+    background: red;
+    position: relative;
+    margin: auto;
+    animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 100px;
+    height: 90px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    left: -50px;
+    top: 0;
+}
+
+.heart::after {
+    left: 0;
+    top: -50px;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.petal {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall 5s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.slideshow-container {
+    max-width: 400px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
